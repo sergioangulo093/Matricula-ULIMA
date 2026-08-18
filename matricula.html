@@ -6,7 +6,78 @@
 
 <title>Sistema de Matrícula</title>
 
-<style> body{ font-family:Arial; background:#f5f5f5; margin:0; } header{ background:#f36f21; color:white; padding:20px; text-align:center; } .container{ width:85%; margin:auto; margin-top:30px; background:white; padding:30px; border-radius:10px; box-shadow:0px 0px 10px rgba(0,0,0,0.1); } h2{ color:#f36f21; } table{ width:100%; border-collapse:collapse; margin-top:20px; } th{ background:#f36f21; color:white; padding:10px; } td{ padding:10px; border-bottom:1px solid #ddd; text-align:center; } .total{ margin-top:20px; font-size:18px; } button{ background:#f36f21; color:white; border:none; padding:10px 18px; border-radius:6px; cursor:pointer; } button:hover{ background:#d95e1c; } </style>
+<style>
+
+body{
+    font-family:Arial;
+    background:#f5f5f5;
+    margin:0;
+}
+
+header{
+    background:#f36f21;
+    color:white;
+    padding:20px;
+    text-align:center;
+}
+
+.container{
+    width:85%;
+    margin:auto;
+    margin-top:30px;
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0px 0px 10px rgba(0,0,0,0.1);
+}
+
+h2{
+    color:#f36f21;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:20px;
+}
+
+th{
+    background:#f36f21;
+    color:white;
+    padding:10px;
+}
+
+td{
+    padding:10px;
+    border-bottom:1px solid #ddd;
+    text-align:center;
+}
+
+.total{
+    margin-top:20px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+#creditos{
+    color:#f36f21;
+    font-size:22px;
+}
+
+button{
+    background:#f36f21;
+    color:white;
+    border:none;
+    padding:10px 18px;
+    border-radius:6px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#d95e1c;
+}
+
+</style>
 
 </head>
 
@@ -14,9 +85,12 @@
 
 <header>
 
-<h1>Sistema de Matrícula</h1> <p>Alumno: Sergio Angulo | Código: 20210124</p>
+<h1>Sistema de Matrícula</h1>
+
+<p>Alumno: Sergio Angulo | Código: 20210124</p>
 
 </header>
+
 
 <div class="container">
 
@@ -24,65 +98,500 @@
 
 <table>
 
-<tr> <th>Curso</th> <th>Profesor</th> <th>Horario</th> <th>Créditos</th> <th>Seleccionar</th> </tr>
+<tr>
+    <th>Curso</th>
+    <th>Profesor</th>
+    <th>Horario</th>
+    <th>Créditos</th>
+    <th>Seleccionar</th>
+</tr>
 
-<tr> <td>DISEÑO ORGANIZACIONAL / ORGANIZATIONAL DESIGN</td> <td>Maria del pilar Garces Madrid</td> <td>Lunes 7-9 / Viernes 7-9</td> <td>—</td> <td><input type="checkbox"></td> </tr>
 
-<tr> <td>GESTIÓN DE PERSONAS / PEOPLE MANAGEMENT</td> <td>Lucy Vega Calero</td> <td>Lunes 9-11 / Miércoles 9-11</td> <td>—</td> <td><input type="checkbox"></td> </tr>
+<tr>
 
-<tr> <td>ELABORACIÓN DE ESTADOS FINANCIEROS</td> <td>Telmo De La Cruz Muscari</td> <td>Lunes 11-13 / Viernes 9-11</td> <td>—</td> <td><input type="checkbox"></td> </tr>
+<td>
+DISEÑO ORGANIZACIONAL / ORGANIZATIONAL DESIGN
+</td>
 
-<tr> <td>MACROECONOMÍA / MACROECONOMICS</td> <td>Maria Lourdes Norabuena Ala Luna</td> <td>Martes 7-10 / Jueves 7-9</td> <td>—</td> <td><input type="checkbox"></td> </tr>
+<td>
+Maria del pilar Garces Madrid
+</td>
 
-<tr> <td>MARKETING ESTRATÉGICO / STRATEGIC MARKETING</td> <td>Julia Velarde Sussoni</td> <td>Martes 11-13 / Jueves 11-13</td> <td>—</td> <td><input type="checkbox"></td> </tr>
+<td>
+Lunes 7-9 / Viernes 7-9
+</td>
+
+<td>
+4
+</td>
+
+<td>
+<input type="checkbox" class="curso" data-creditos="4">
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+GESTIÓN DE PERSONAS / PEOPLE MANAGEMENT
+</td>
+
+<td>
+Lucy Vega Calero
+</td>
+
+<td>
+Lunes 9-11 / Miércoles 9-11
+</td>
+
+<td>
+3
+</td>
+
+<td>
+<input type="checkbox" class="curso" data-creditos="3">
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+ELABORACIÓN DE ESTADOS FINANCIEROS
+</td>
+
+<td>
+Telmo De La Cruz Muscari
+</td>
+
+<td>
+Lunes 11-13 / Viernes 9-11
+</td>
+
+<td>
+3
+</td>
+
+<td>
+<input type="checkbox" class="curso" data-creditos="3">
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+MACROECONOMÍA / MACROECONOMICS
+</td>
+
+<td>
+Maria Lourdes Norabuena Ala Luna
+</td>
+
+<td>
+Martes 7-10 / Jueves 7-9
+</td>
+
+<td>
+3
+</td>
+
+<td>
+<input type="checkbox" class="curso" data-creditos="3">
+</td>
+
+</tr>
+
+
+<tr>
+
+<td>
+MARKETING ESTRATÉGICO / STRATEGIC MARKETING
+</td>
+
+<td>
+Julia Velarde Sussoni
+</td>
+
+<td>
+Martes 11-13 / Jueves 11-13
+</td>
+
+<td>
+3
+</td>
+
+<td>
+<input type="checkbox" class="curso" data-creditos="3">
+</td>
+
+</tr>
 
 </table>
 
+
 <div class="total">
 
-Cursos seleccionados: <span id="creditos">0</span>
+Cursos seleccionados:
+<span id="cursosSeleccionados">0</span>
 
 </div>
+
+
+<div class="total">
+
+Créditos totales:
+<span id="creditos">0</span>
+
+</div>
+
 
 <h2>Horario del Alumno</h2>
 
 <table>
 
-<tr> <th>Hora</th> <th>Lunes</th> <th>Martes</th> <th>Miércoles</th> <th>Jueves</th> <th>Viernes</th> <th>Sábado</th> </tr>
+<tr>
 
-<tr> <td>7:00 - 8:00</td> <td>DISEÑO ORGANIZACIONAL / ORGANIZATIONAL DESIGN<br>Maria del pilar Garces Madrid</td> <td>MACROECONOMÍA / MACROECONOMICS<br>Maria Lourdes Norabuena Ala Luna</td> <td></td> <td>MACROECONOMÍA / MACROECONOMICS<br>Maria Lourdes Norabuena Ala Luna</td> <td>DISEÑO ORGANIZACIONAL / ORGANIZATIONAL DESIGN<br>Maria del pilar Garces Madrid</td> <td></td> </tr>
+<th>Hora</th>
+<th>Lunes</th>
+<th>Martes</th>
+<th>Miércoles</th>
+<th>Jueves</th>
+<th>Viernes</th>
+<th>Sábado</th>
 
-<tr> <td>8:00 - 9:00</td> <td>DISEÑO ORGANIZACIONAL / ORGANIZATIONAL DESIGN<br>Maria del pilar Garces Madrid</td> <td>MACROECONOMÍA / MACROECONOMICS<br>Maria Lourdes Norabuena Ala Luna</td> <td></td> <td>MACROECONOMÍA / MACROECONOMICS<br>Maria Lourdes Norabuena Ala Luna</td> <td>DISEÑO ORGANIZACIONAL / ORGANIZATIONAL DESIGN<br>Maria del pilar Garces Madrid</td> <td></td> </tr>
+</tr>
 
-<tr> <td>9:00 - 10:00</td> <td>GESTIÓN DE PERSONAS / PEOPLE MANAGEMENT<br>Lucy Vega Calero</td> <td>MACROECONOMÍA / MACROECONOMICS<br>Maria Lourdes Norabuena Ala Luna</td> <td>GESTIÓN DE PERSONAS / PEOPLE MANAGEMENT<br>Lucy Vega Calero</td> <td></td> <td>ELABORACIÓN DE ESTADOS FINANCIEROS<br>Telmo De La Cruz Muscari</td> <td></td> </tr>
 
-<tr> <td>10:00 - 11:00</td> <td>GESTIÓN DE PERSONAS / PEOPLE MANAGEMENT<br>Lucy Vega Calero</td> <td></td> <td>GESTIÓN DE PERSONAS / PEOPLE MANAGEMENT<br>Lucy Vega Calero</td> <td></td> <td>ELABORACIÓN DE ESTADOS FINANCIEROS<br>Telmo De La Cruz Muscari</td> <td></td> </tr>
+<tr>
 
-<tr> <td>11:00 - 12:00</td> <td>ELABORACIÓN DE ESTADOS FINANCIEROS<br>Telmo De La Cruz Muscari</td> <td>MARKETING ESTRATÉGICO / STRATEGIC MARKETING<br>Julia Velarde Sussoni</td> <td></td> <td>MARKETING ESTRATÉGICO / STRATEGIC MARKETING<br>Julia Velarde Sussoni</td> <td></td> <td></td> </tr>
+<td>7:00 - 8:00</td>
 
-<tr> <td>12:00 - 13:00</td> <td>ELABORACIÓN DE ESTADOS FINANCIEROS<br>Telmo De La Cruz Muscari</td> <td>MARKETING ESTRATÉGICO / STRATEGIC MARKETING<br>Julia Velarde Sussoni</td> <td></td> <td>MARKETING ESTRATÉGICO / STRATEGIC MARKETING<br>Julia Velarde Sussoni</td> <td></td> <td></td> </tr>
+<td>
+DISEÑO ORGANIZACIONAL / ORGANIZATIONAL DESIGN<br>
+Maria del pilar Garces Madrid
+</td>
 
-<tr> <td>13:00 - 14:00</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> </tr>
+<td>
+MACROECONOMÍA / MACROECONOMICS<br>
+Maria Lourdes Norabuena Ala Luna
+</td>
 
-<tr> <td>14:00 - 15:00</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> </tr>
+<td></td>
 
-<tr> <td>15:00 - 16:00</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> </tr>
+<td>
+MACROECONOMÍA / MACROECONOMICS<br>
+Maria Lourdes Norabuena Ala Luna
+</td>
 
-<tr> <td>16:00 - 17:00</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> </tr>
+<td>
+DISEÑO ORGANIZACIONAL / ORGANIZATIONAL DESIGN<br>
+Maria del pilar Garces Madrid
+</td>
 
-<tr> <td>17:00 - 18:00</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> </tr>
+<td></td>
 
-<tr> <td>18:00 - 19:00</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> </tr>
+</tr>
 
-<tr> <td>19:00 - 20:00</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> </tr>
 
-<tr> <td>20:00 - 21:00</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> </tr>
+<tr>
 
-<tr> <td>21:00 - 22:00</td> <td></td> <td></td> <td></td> <td></td> <td></td> <td></td> </tr>
+<td>8:00 - 9:00</td>
+
+<td>
+DISEÑO ORGANIZACIONAL / ORGANIZATIONAL DESIGN<br>
+Maria del pilar Garces Madrid
+</td>
+
+<td>
+MACROECONOMÍA / MACROECONOMICS<br>
+Maria Lourdes Norabuena Ala Luna
+</td>
+
+<td></td>
+
+<td>
+MACROECONOMÍA / MACROECONOMICS<br>
+Maria Lourdes Norabuena Ala Luna
+</td>
+
+<td>
+DISEÑO ORGANIZACIONAL / ORGANIZATIONAL DESIGN<br>
+Maria del pilar Garces Madrid
+</td>
+
+<td></td>
+
+</tr>
+
+
+<tr>
+
+<td>9:00 - 10:00</td>
+
+<td>
+GESTIÓN DE PERSONAS / PEOPLE MANAGEMENT<br>
+Lucy Vega Calero
+</td>
+
+<td>
+MACROECONOMÍA / MACROECONOMICS<br>
+Maria Lourdes Norabuena Ala Luna
+</td>
+
+<td>
+GESTIÓN DE PERSONAS / PEOPLE MANAGEMENT<br>
+Lucy Vega Calero
+</td>
+
+<td></td>
+
+<td>
+ELABORACIÓN DE ESTADOS FINANCIEROS<br>
+Telmo De La Cruz Muscari
+</td>
+
+<td></td>
+
+</tr>
+
+
+<tr>
+
+<td>10:00 - 11:00</td>
+
+<td>
+GESTIÓN DE PERSONAS / PEOPLE MANAGEMENT<br>
+Lucy Vega Calero
+</td>
+
+<td></td>
+
+<td>
+GESTIÓN DE PERSONAS / PEOPLE MANAGEMENT<br>
+Lucy Vega Calero
+</td>
+
+<td></td>
+
+<td>
+ELABORACIÓN DE ESTADOS FINANCIEROS<br>
+Telmo De La Cruz Muscari
+</td>
+
+<td></td>
+
+</tr>
+
+
+<tr>
+
+<td>11:00 - 12:00</td>
+
+<td>
+ELABORACIÓN DE ESTADOS FINANCIEROS<br>
+Telmo De La Cruz Muscari
+</td>
+
+<td>
+MARKETING ESTRATÉGICO / STRATEGIC MARKETING<br>
+Julia Velarde Sussoni
+</td>
+
+<td></td>
+
+<td>
+MARKETING ESTRATÉGICO / STRATEGIC MARKETING<br>
+Julia Velarde Sussoni
+</td>
+
+<td></td>
+
+<td></td>
+
+</tr>
+
+
+<tr>
+
+<td>12:00 - 13:00</td>
+
+<td>
+ELABORACIÓN DE ESTADOS FINANCIEROS<br>
+Telmo De La Cruz Muscari
+</td>
+
+<td>
+MARKETING ESTRATÉGICO / STRATEGIC MARKETING<br>
+Julia Velarde Sussoni
+</td>
+
+<td></td>
+
+<td>
+MARKETING ESTRATÉGICO / STRATEGIC MARKETING<br>
+Julia Velarde Sussoni
+</td>
+
+<td></td>
+
+<td></td>
+
+</tr>
+
+
+<tr>
+<td>13:00 - 14:00</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+
+<tr>
+<td>14:00 - 15:00</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+
+<tr>
+<td>15:00 - 16:00</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+
+<tr>
+<td>16:00 - 17:00</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+
+<tr>
+<td>17:00 - 18:00</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+
+<tr>
+<td>18:00 - 19:00</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+
+<tr>
+<td>19:00 - 20:00</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+
+<tr>
+<td>20:00 - 21:00</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+
+
+<tr>
+<td>21:00 - 22:00</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
 
 </table>
 
 </div>
+
+
+<script>
+
+/* 
+   Sumar créditos automáticamente
+   cada vez que se selecciona o
+   deselecciona un curso
+*/
+
+const cursos = document.querySelectorAll(".curso");
+
+cursos.forEach(function(curso) {
+
+    curso.addEventListener("change", calcularCreditos);
+
+});
+
+
+function calcularCreditos() {
+
+    let totalCreditos = 0;
+
+    let cantidadCursos = 0;
+
+
+    cursos.forEach(function(curso) {
+
+        if (curso.checked) {
+
+            totalCreditos += Number(curso.dataset.creditos);
+
+            cantidadCursos++;
+
+        }
+
+    });
+
+
+    document.getElementById("creditos").textContent = totalCreditos;
+
+    document.getElementById("cursosSeleccionados").textContent = cantidadCursos;
+
+}
+
+</script>
+
 
 </body>
 
